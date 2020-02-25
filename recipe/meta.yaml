@@ -1,5 +1,5 @@
 {% set name = "rocm-smi" %}
-{% set version = "2.7.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/ROC-smi/archive/roc-{{ version }}.tar.gz
-  sha256: 7346d49c369fbc419cf3ae8dc408185f7606d64342438de804ede8baf5561155
+  sha256: df8a1f646ad0bfa6c8a0a0545b55e79514f22319df92a2d8290fd4aa58aaaf61
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
   script:
     - mkdir -p $PREFIX/bin
     - cp rocm_smi.py $PREFIX/bin/rocm_smi.py
@@ -27,7 +27,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'ROC System Management Interface'
+  summary: ROC System Management Interface
 
 extra:
   recipe-maintainers:
