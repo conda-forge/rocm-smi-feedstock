@@ -23,7 +23,7 @@ requirements:
   run:
 
 test:
-  import: 
+  imports: 
     - rsmiBindings
   commands:
     - test -f $PREFIX/bin/rocm-smi
