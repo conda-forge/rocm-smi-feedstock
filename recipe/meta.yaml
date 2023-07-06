@@ -23,8 +23,6 @@ requirements:
   run:
 
 test:
-  imports: 
-    - rsmiBindings
   commands:
     - test -f $PREFIX/bin/rocm-smi
     - test -f $PREFIX/lib/librocm_smi64$SHLIB_EXT.*.*  # [unix]
