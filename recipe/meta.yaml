@@ -1,34 +1,50 @@
 {% set name = "rocm-smi" %}
-{% set version = "2.7.0" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/RadeonOpenCompute/ROC-smi/archive/roc-{{ version }}.tar.gz
-  sha256: 7346d49c369fbc419cf3ae8dc408185f7606d64342438de804ede8baf5561155
+  url: https://github.com/RadeonOpenCompute/rocm_smi_lib/archive/rocm-{{ version }}.tar.gz
+  sha256: 88be875948a29454b8aacced8bb8ad967502a7a074ecbc579ed673c1650a2f7e
 
 build:
   number: 0
   skip: True  # [not linux]
-  script:
-    - mkdir -p $PREFIX/bin
-    - cp rocm_smi.py $PREFIX/bin/rocm_smi.py
-    - chmod +x $PREFIX/bin/rocm_smi.py
-    - ln -s $PREFIX/bin/rocm_smi.py $PREFIX/bin/rocm-smi
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - make
+  host:
+  run:
 
 test:
   commands:
     - test -f $PREFIX/bin/rocm-smi
+    - test -f $PREFIX/lib/librocm_smi64$SHLIB_EXT.*.*  # [unix]
+    - test -f $PREFIX/lib/liboam$SHLIB_EXT.*.*  # [unix]
 
 about:
-  home: https://github.com/RadeonOpenCompute/ROC-smi
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE
+  home: https://github.com/RadeonOpenCompute/rocm_smi_lib
   summary: 'ROC System Management Interface'
+  description: |
+    The ROCm System Management Interface Library, or ROCm SMI library, is
+    part of the Radeon Open Compute ROCm software stack . It is a C library
+    for Linux that provides a user space interface for applications to 
+    monitor and control GPU applications. In addition, this package includes 
+    the rocm-smi tool. This tool exposes functionality for clock and 
+    temperature management of your ROCm enabled system.
+  license: NCSA
+  license_family: OTHER
+  license_file: License.txt
+  doc_url: https://github.com/RadeonOpenCompute/rocm_smi_lib
+  dev_url: https://github.com/RadeonOpenCompute/rocm_smi_lib
 
 extra:
   recipe-maintainers:
     - isuruf
+    - jan-janssen

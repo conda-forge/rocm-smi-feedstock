@@ -1,14 +1,22 @@
-About rocm-smi
-==============
+About rocm-smi-lib-feedstock
+============================
 
-Home: https://github.com/RadeonOpenCompute/ROC-smi
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rocm-smi-feedstock/blob/main/LICENSE.txt)
 
-Package license: MIT
+Home: https://github.com/RadeonOpenCompute/rocm_smi_lib
 
-Feedstock license: BSD 3-Clause
+Package license: NCSA
 
-Summary: ROC System Management Interface
+Summary: ROCm SMI LIB
 
+Development: https://github.com/RadeonOpenCompute/rocm_smi_lib
+
+Documentation: https://github.com/RadeonOpenCompute/rocm_smi_lib
+
+The ROCm System Management Interface Library, or ROCm SMI library, is
+part of the Radeon Open Compute ROCm software stack . It is a C library
+for Linux that provides a user space interface for applications to
+monitor and control GPU applications.
 
 
 Current build status
@@ -22,41 +30,23 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=master">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=master">
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=main">
           </a>
         </summary>
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_64</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>OSX</td>
-    <td>
-      <img src="https://img.shields.io/badge/OSX-disabled-lightgrey.svg" alt="OSX disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Windows</td>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -66,34 +56,61 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-rocm--smi-green.svg)](https://anaconda.org/conda-forge/rocm-smi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/rocm-smi.svg)](https://anaconda.org/conda-forge/rocm-smi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/rocm-smi.svg)](https://anaconda.org/conda-forge/rocm-smi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/rocm-smi.svg)](https://anaconda.org/conda-forge/rocm-smi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-rocm--smi--lib-green.svg)](https://anaconda.org/conda-forge/rocm-smi-lib) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/rocm-smi-lib.svg)](https://anaconda.org/conda-forge/rocm-smi-lib) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/rocm-smi-lib.svg)](https://anaconda.org/conda-forge/rocm-smi-lib) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/rocm-smi-lib.svg)](https://anaconda.org/conda-forge/rocm-smi-lib) |
 
-Installing rocm-smi
-===================
+Installing rocm-smi-lib
+=======================
 
-Installing `rocm-smi` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `rocm-smi-lib` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `rocm-smi` can be installed with:
+Once the `conda-forge` channel has been enabled, `rocm-smi-lib` can be installed with `conda`:
 
 ```
-conda install rocm-smi
+conda install rocm-smi-lib
 ```
 
-It is possible to list all of the versions of `rocm-smi` available on your platform with:
+or with `mamba`:
 
 ```
-conda search rocm-smi --channel conda-forge
+mamba install rocm-smi-lib
+```
+
+It is possible to list all of the versions of `rocm-smi-lib` available on your platform with `conda`:
+
+```
+conda search rocm-smi-lib --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search rocm-smi-lib --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search rocm-smi-lib --channel conda-forge
+
+# List packages depending on `rocm-smi-lib`:
+mamba repoquery whoneeds rocm-smi-lib --channel conda-forge
+
+# List dependencies of `rocm-smi-lib`:
+mamba repoquery depends rocm-smi-lib --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -103,10 +120,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
@@ -128,30 +147,31 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating rocm-smi-feedstock
-===========================
+Updating rocm-smi-lib-feedstock
+===============================
 
-If you would like to improve the rocm-smi recipe or build a new
+If you would like to improve the rocm-smi-lib recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/rocm-smi-feedstock are
+Note that all branches in the conda-forge/rocm-smi-lib-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
 =====================
 
 * [@isuruf](https://github.com/isuruf/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 
