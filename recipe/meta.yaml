@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/RadeonOpenCompute/rocm_smi_lib
-  summary: 'ROCm SMI LIB'
+  summary: 'ROC System Management Interface'
   description: |
     The ROCm System Management Interface Library, or ROCm SMI library, is
     part of the Radeon Open Compute ROCm software stack . It is a C library
