@@ -1,5 +1,5 @@
 {% set name = "rocm-smi" %}
-{% set version = "5.6.0" %}
+{% set version = "5.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: 88be875948a29454b8aacced8bb8ad967502a7a074ecbc579ed673c1650a2f7e
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not linux]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
