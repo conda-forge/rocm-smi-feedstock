@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/rocm_smi_lib/archive/rocm-{{ version }}.tar.gz
-  sha256: 88be875948a29454b8aacced8bb8ad967502a7a074ecbc579ed673c1650a2f7e
+  sha256: 34d550272e420684230ceb7845aefcef79b155e51cf9ec55e31fdba2a4ed177b
 
 build:
   number: 0
