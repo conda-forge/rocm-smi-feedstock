@@ -1,5 +1,5 @@
 {% set name = "rocm-smi" %}
-{% set version = "5.7.1" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RadeonOpenCompute/rocm_smi_lib/archive/rocm-{{ version }}.tar.gz
-  sha256: 4d79cb0482b2f801cc7824172743e3dd2b44b9f6784d1ca2e5067f2fbb4ef803
+  sha256: 0053b42402fd007e5ca9b3186c70f2c6f1b3026558f328722adadc2838c51309
 
 build:
   number: 0
