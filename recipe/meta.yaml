@@ -24,6 +24,7 @@ requirements:
     - make
     - pkg-config
   host:
+    - rocm-core {{ version }}
     - libdrm
   run:
 
