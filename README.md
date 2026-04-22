@@ -3,7 +3,7 @@ About rocm-smi-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rocm-smi-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/RadeonOpenCompute/rocm_smi_lib
+Home: https://github.com/ROCm/rocm-systems
 
 Package license: NCSA
 
@@ -20,37 +20,11 @@ monitor and control GPU applications. In addition, this package includes
 the rocm-smi tool. This tool exposes functionality for clock and
 temperature management of your ROCm enabled system.
 
-
 Current build status
 ====================
 
 
 <table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8387&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rocm-smi-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
