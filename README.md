@@ -5,13 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rocm-smi-feedst
 
 Home: https://github.com/ROCm/rocm-systems
 
-Package license: NCSA
+Package license: MIT
 
 Summary: ROC System Management Interface
 
-Development: https://github.com/RadeonOpenCompute/rocm_smi_lib
+Development: https://github.com/ROCm/rocm-systems
 
-Documentation: https://github.com/RadeonOpenCompute/rocm_smi_lib
+Documentation: https://rocm.docs.amd.com/projects/rocm_smi_lib/
 
 The ROCm System Management Interface Library, or ROCm SMI library, is
 part of the Radeon Open Compute ROCm software stack . It is a C library
@@ -24,7 +24,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/rocm-smi-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/rocm-smi-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -148,6 +155,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/rocm-core](https://github.com/orgs/conda-forge/teams/rocm-core/)
 * [@isuruf](https://github.com/isuruf/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 
