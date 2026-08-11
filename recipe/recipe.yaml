@@ -13,7 +13,7 @@ source:
   sha256: eab6c7a85deb992b5cf511cdf7d0a6f8a93e46a0bfb6cf66c73d95c26dc4ce5e
 
 build:
-  number: 0
+  number: 1
   skip: not linux
 
 requirements:
@@ -35,10 +35,9 @@ tests:
   - script:
       - test -f $PREFIX/bin/rocm-smi
       - if: unix
-        then: test -f $PREFIX/lib/librocm_smi64$SHLIB_EXT.*.*
-      - if: unix
-        then: test -f $PREFIX/lib/liboam$SHLIB_EXT.*.*
-
+        then:
+          - test -f $PREFIX/lib/librocm_smi64$SHLIB_EXT.*.*
+          - test -f $PREFIX/lib/liboam$SHLIB_EXT.*.*
 about:
   summary: ROC System Management Interface
   description: |
